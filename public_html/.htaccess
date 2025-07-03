@@ -4,6 +4,6 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 #RewriteEngine on
 
-RewriteCond %{HTTP_HOST} skambink\.tel [NC]
-RewriteCond %{REQUEST_URI} ^/$
-RewriteRule ^(.*)$ /061600055/$1 [L,R=301]
+#RewriteCond %{HTTP_HOST} skambink\.tel [NC]
+#RewriteCond %{REQUEST_URI} ^/$
+#RewriteRule ^(.*)$ /061600055/$1 [L,R=301]
