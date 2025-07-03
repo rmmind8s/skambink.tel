@@ -1,0 +1,223 @@
+:root {
+    --theme-dark: #555555;
+    --theme-white: #ffffff;
+    --notification-bottom: 0.75rem;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    position: relative;
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #2b2249;
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    /*width: 100%;
+    height: 100%;*/
+    object-fit: contain;
+}
+
+.header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #eee;
+}
+
+header a{
+    color: #ffffff;
+}
+
+header p a{
+    background-color: #00000077;
+    padding: 0.25em;
+    color: #00ca59;
+}
+
+.info{
+    color: #ffffff77;
+    margin-left: 0.15em;
+}
+
+main {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main h1 {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main li {
+    margin: 0.5rem 0;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+footer a{
+    color: #555555;
+}
+
+a, a:link{
+    text-decoration: none;
+}
+
+a:active, a:hover{
+    text-decoration: underline;
+}
+
+li {
+    font-size: 2rem;
+}
+
+#copy {
+    font-size: 2rem;
+    margin-left:0.25em;
+    color: #595959;
+}
+
+#tel {
+    margin-bottom:1rem;
+}
+
+#tel a {
+    font-size: 4rem;
+    color: #00ca58;
+}
+
+#sms a {
+    color: #1f67ea;
+}
+
+#viber a {
+    color: #7360f2;
+}
+
+#whatsapp a{
+    color: #25d366;
+}
+
+#tg a{
+    color: #24A1DE;
+}
+
+#messenger a {
+    color: #0966ff;
+}
+
+.messenger {
+    display: inline-block;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+#notification {
+    visibility: hidden;
+    color: var(--theme-white);
+    background-color: var(--theme-dark);
+    font-size: 1em;
+
+    border-radius: 5px;
+    padding: 16px 30px;
+    text-align: center;
+
+    bottom: var(--notification-bottom);
+    z-index: 1;
+    position: fixed;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#notification.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: var(--notification-bottom); opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: var(--notification-bottom); opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: var(--notification-bottom); opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: var(--notification-bottom); opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+#description {
+    max-width: 33vh;
+    background-color: rgba(255, 255, 255, 0.77);
+    padding: 1rem;
+    color: #eee;
+    margin-bottom: 0.5rem;
+    visibility: hidden;
+    color: #333333;
+}
+
+.deep {
+    margin-left: 0.5rem;
+}

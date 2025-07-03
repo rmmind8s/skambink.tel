@@ -5,8 +5,9 @@ function showNotification(msg) {
     setTimeout(()=>{ mb.className = mb.className.replace("show", ""); }, 3000);
 }
 
-async function copy(text) {
+async function copy(id) {
     try {
+        var text = document.getElementById(id).innerHTML;
         await navigator.clipboard.writeText(text);
         showNotification("Nukopijuota");
         console.log('Content copied to clipboard');
@@ -15,4 +16,10 @@ async function copy(text) {
     }
 }
 
-
+function toggle_visibility(id) {
+  var e = document.getElementById(id);
+  if(e.style.visibility == 'hidden')
+    e.style.visibility = 'visible';
+  else
+    e.style.visibility = 'hidden';
+}
