@@ -1,0 +1,21 @@
+name: FTP Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: litis.serveriai.lt
+          username: itaslt
+          password: B6j2REwEe4APEeJx
+          server-dir: /domains/skambink.tel/
