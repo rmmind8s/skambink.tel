@@ -115,10 +115,17 @@ if (strlen($short) > 0) {
           </div>
           <!-- Skambinimo mygtukas -->
           <button
-            class="text-green-500 flex items-center justify-center text-6xl shadow-xl mt-10"
+            class="text-green-500 flex items-center justify-center text-7xl shadow-xl mt-10"
           >
             <i class="fa-solid fa-square-phone-flip"></i>
           </button>
+          <?php if( !$smsDisable ): ?>
+            <button
+              class="text-blue-500 flex items-center justify-center text-3xl shadow-xl mt-10"
+            >
+              <i class="fa-solid fa-comment-sms"></i>
+            </button>
+          <?php endif; ?>
         </div>
   </body>
 
