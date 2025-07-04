@@ -119,7 +119,7 @@ if (strlen($short) > 0) {
             <h1> <span id="phone"><?= $phone ?></span><a id="copy" href="#" onclick="copy('phone');return false;"><i class="fa-solid fa-copy"></i></a></h1>
             <ul>
                 <li id="tel"><a href="tel:<?= $phpne ?>"><i class="fa-solid fa-square-phone-flip"></i></a></li>
-                <?php if( !$smsDisable ) ): ?>
+                <?php if( !$smsDisable ): ?>
                 <li id="sms" class="messenger" ><a href="sms:<?= $phpne ?>"><i class="fa-solid fa-comment-sms"></i></a></li>
                 <?php endif; ?>
             </ul>
