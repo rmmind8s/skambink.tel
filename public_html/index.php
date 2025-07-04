@@ -33,11 +33,11 @@ if( isset($data[$phone]) ) {
   $name = $data[$phone]["name"];
   $short = $data[$phone]["short"];
 
-  if( isset($data[$id]["image"]) ){
+  if( isset($data[$phone]["image"]) ){
     $image = "https://skambink.tel/img/" . $data[$phone]["image"];
   }
 
-  if( isset($data[$id]["description"]) ){
+  if( isset($data[$phone]["description"]) ){
     $description = $data[$phone]["description"];
   } else {
     $description = "Jeigu esate šio telefono numerio savininkas/valdytojas, tuomet galite <a>nurodyti papildomą informaciją</a>.";
@@ -104,7 +104,7 @@ if (strlen($short) > 0) {
             <div class="header-content">
                 <p id="description" style="visibility: hidden;"><?= $description ?></p>
                 <h2><?= $name ?><a href="#" class="light" onclick="toggle_visibility('description');"><i class="fa-solid fa-circle-info info"></i></a></h2>
-                <p>I<?= $short ?></p>
+                <p><?= $short ?></p>
             </div>
         </header>
 
