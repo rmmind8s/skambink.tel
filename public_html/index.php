@@ -43,7 +43,7 @@ if( isset($data[$phone]) ) {
 
 }
 
-$phone = str_starts_with($phone, '0')) ? "+370" . substr($phone, 1) : $phone;
+$phone = str_starts_with($phone, '0') ? "+370" . substr($phone, 1) : $phone;
 
 $title = '';
 
