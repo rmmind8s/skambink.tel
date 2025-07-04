@@ -102,7 +102,7 @@ if (strlen($short) > 0) {
     </head>
 
   <body class="bg-gradient-to-b from-gray-300 to-gray-50 flex items-center justify-center h-screen">
-        <div class="flex flex-col items-center space-y-6 text-white">
+        <div class="flex flex-col justify-between items-center space-y-6 text-white">
           <!-- Kontaktas -->
           <img
             src="<?= $image ?>"
@@ -127,6 +127,11 @@ if (strlen($short) > 0) {
             </button>
           <?php endif; ?>
         </div>
+
+        <footer class="text-center py-4 text-gray-400 text-sm">
+          Skambink.TEL
+        </footer>
+
   </body>
 
 </html>
