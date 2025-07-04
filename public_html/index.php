@@ -1,6 +1,6 @@
 <?php
 
-$phone = isset($_GET['phone']) ? htmlspecialchars(basename($_GET['phone'])) : '';
+$phone = isset($_GET['phone']) ? htmlspecialchars(basename($_GET['phone'])) : '112';
 $short = isset($_GET['short']) ? htmlspecialchars(basename($_GET['short'])) : '';
 
 $dataExists = false;
@@ -11,11 +11,14 @@ $data = array(
     "name" => "IT'menas",
     "short" => "Informacinių technologijų specialistas",
     "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁"
+  ),
+  "112" => array(
+    "phone" => "112",
+    "name" => "Skubi pagalba",
+    "short" => "Bendrasis pagalbos centras",
+    "description" =>
   )
 );
-
-$name = "Nežinomas numeris";
-$description = "Telefono numeris nėra registruotas sistemoje. Jei esate šio numerio savininkas/valdytojas, galite <a>registruoti</a>.";
 
 if( isset($data[$phone]) ) {
 
@@ -30,6 +33,9 @@ if( isset($data[$phone]) ) {
     $description = "Jeigu esate šio telefono numerio savininkas/valdytojas, tuomet galite <a>nurodyti papildomą informaciją</a>.";
   }
 
+} else {
+  $name = "Nežinomas numeris";
+  $description = "Telefono numeris nėra registruotas sistemoje. Jei esate šio numerio savininkas/valdytojas, galite <a>registruoti</a>.";
 }
 
 $title = '';
