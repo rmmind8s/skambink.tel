@@ -101,7 +101,7 @@ if (strlen($short) > 0) {
         </style>
     </head>
 
-  <body class="bg-gradient-to-b from-gray-600 to-gray-50 flex items-center justify-center h-screen">
+  <body class="bg-gradient-to-b from-gray-300 to-gray-50 flex items-center justify-center h-screen">
         <div class="flex flex-col items-center space-y-6 text-white">
           <!-- Kontaktas -->
           <img
