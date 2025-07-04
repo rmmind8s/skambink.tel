@@ -54,7 +54,7 @@ $phone = str_starts_with($phone, '0') ? "+370" . substr($phone, 1) : $phone;
 $title = '';
 
 if($dataExists) {
-  $title .= " | " . $name;
+  $title .= $name;
 }
 
 if (strlen($short) > 0) {
@@ -90,44 +90,27 @@ if (strlen($short) > 0) {
         <script src="https://kit.fontawesome.com/d51de49024.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-        <style>
-            :root {
-                --theme-color: #999999;
-            }
-
-            header {
-                background: var(--theme-color);
-            }
-        </style>
-
     </head>
 
-    <body>
+  <body class="bg-black flex items-center justify-center h-screen">
+        <div class="flex flex-col items-center space-y-6 text-white">
+          <!-- Kontaktas -->
+          <img
+            src="<?= $image ?>"
+            alt="Adresato nuotrauka"
+            class="w-32 h-32 rounded-full border-4 border-gray-300 shadow"
+          />
+          <div class="text-center">
+            <h2 class="text-2xl font-semibold"><?= $name ?></h2>
+            <p class="text-gray-300 mt-1"><?= $short ?></p>
+          </div>
+          <!-- Skambinimo mygtukas -->
+          <button
+            class="bg-green-500 hover:bg-green-600 rounded-full w-16 h-16 flex items-center justify-center text-3xl shadow-xl mt-10"
+          >
+            📞
+          </button>
+        </div>
+  </body>
 
-        <header>
-            <img id="profile" src="<?= $image ?>" alt="Header Image">
-            <div class="header-content">
-                <p id="description" style="visibility: hidden;"><?= $description ?></p>
-                <h2><?= $name ?><a href="#" class="light" onclick="toggle_visibility('description');"><i class="fa-solid fa-circle-info info"></i></a></h2>
-                <p><?= $short ?></p>
-            </div>
-        </header>
-
-        <main>
-            <h1> <span id="phone"><?= $phone ?></span><a id="copy" href="#" onclick="copy('phone');return false;"><i class="fa-solid fa-copy"></i></a></h1>
-            <ul>
-                <li id="tel"><a href="tel:<?= $phpne ?>"><i class="fa-solid fa-square-phone-flip"></i></a></li>
-                <?php if( !$smsDisable ): ?>
-                <li id="sms" class="messenger" ><a href="sms:<?= $phpne ?>"><i class="fa-solid fa-comment-sms"></i></a></li>
-                <?php endif; ?>
-            </ul>
-
-        </main>
-
-        <footer>
-            <a href="https://skambink.tel/" class="grey">Skambink.TEL</a>
-            <span id="notification"></span>
-        </footer>
-        <script src="https://skambink.tel/scripts.js?ver=0.1.0"></script>
-    </body>
 </html>
