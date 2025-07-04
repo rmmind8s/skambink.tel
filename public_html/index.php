@@ -8,14 +8,12 @@ $dataExists = false;
 
 $data = array(
   "061600055" => array(
-    "phone" => "+37061600055",
     "name" => "IT'menas",
     "short" => "Informacinių technologijų specialistas",
     "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁",
     "image" => "061600055.jpg"
   ),
   "112" => array(
-    "phone" => "112",
     "name" => "Skubi pagalba",
     "short" => "Bendrasis pagalbos centras",
     "description" => "Bendras telefono ryšio numeris, skirtas pranešti apie teisės pažeidimą, staiga iškilusią grėsmę gyvybei, sveikatai, saugumui, aplinkai ar turtui ir išsikviesti pagalbos tarnyboms: policijai, priešgaisrinei gelbėjimo tarnybai, greitajai medicinos pagalbai ar aplinkosaugai.",
@@ -44,6 +42,8 @@ if( isset($data[$phone]) ) {
   }
 
 }
+
+$phone = str_starts_with($phone, '0')) ? "+370" . substr($phone, 1) : $phone;
 
 $title = '';
 
