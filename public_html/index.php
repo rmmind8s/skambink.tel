@@ -90,6 +90,15 @@ if (strlen($short) > 0) {
         <script src="https://kit.fontawesome.com/d51de49024.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
+        <style>
+        :root {
+          --color-green-500: #28A745;
+          --color-green-600: #1f8a38;
+        }
+        .text-green-500 {
+          color: var(--color-green-500);
+        }
+        </style>
     </head>
 
   <body class="bg-gradient-to-b from-gray-600 to-gray-50 flex items-center justify-center h-screen">
@@ -106,7 +115,7 @@ if (strlen($short) > 0) {
           </div>
           <!-- Skambinimo mygtukas -->
           <button
-            class="text-green-500 flex items-center justify-center text-3xl shadow-xl mt-10"
+            class="text-green-500 flex items-center justify-center text-6xl shadow-xl mt-10"
           >
             <i class="fa-solid fa-square-phone-flip"></i>
           </button>
