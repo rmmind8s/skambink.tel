@@ -1,7 +1,7 @@
 <?php
 
 $phone = isset($_GET['phone']) ? htmlspecialchars(basename($_GET['phone'])) : '112';
-$phone = isset($_GET['name']) ? htmlspecialchars(basename($_GET['name'])) : 'Nežinomas numeris';
+$name = isset($_GET['name']) ? htmlspecialchars(basename($_GET['name'])) : 'Nežinomas numeris';
 $short = isset($_GET['short']) ? htmlspecialchars(basename($_GET['short'])) : '';
 
 $dataExists = false;
