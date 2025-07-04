@@ -16,7 +16,7 @@ $data = array(
     "phone" => "112",
     "name" => "Skubi pagalba",
     "short" => "Bendrasis pagalbos centras",
-    "description" =>
+    "description" => "Bendras telefono ryšio numeris, skirtas pranešti apie teisės pažeidimą, staiga iškilusią grėsmę gyvybei, sveikatai, saugumui, aplinkai ar turtui ir išsikviesti pagalbos tarnyboms: policijai, priešgaisrinei gelbėjimo tarnybai, greitajai medicinos pagalbai ar aplinkosaugai."
   )
 );
 
