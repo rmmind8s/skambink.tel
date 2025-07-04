@@ -101,8 +101,8 @@ if (strlen($short) > 0) {
         </style>
     </head>
 
-  <body class="bg-gradient-to-b from-gray-300 to-gray-50 flex flex-col justify-between h-screen">
-        <div class="flex flex-col items-center space-y-6 text-white">
+  <body class="bg-gradient-to-b from-gray-300 to-gray-50 flex flex-col h-screen">
+        <div class="flex flex-col items-center justify-center flex-grow space-y-6">
           <!-- Kontaktas -->
           <img
             src="<?= $image ?>"
@@ -128,7 +128,7 @@ if (strlen($short) > 0) {
           <?php endif; ?>
         </div>
 
-        <footer class="text-center py-4 text-gray-400 text-sm">
+        <footer class="text-center py-4 text-gray-800 text-sm">
           Skambink.TEL
         </footer>
 
