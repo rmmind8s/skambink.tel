@@ -1,6 +1,7 @@
 <?php
 
 $phone = isset($_GET['phone']) ? htmlspecialchars(basename($_GET['phone'])) : '112';
+$phone = isset($_GET['name']) ? htmlspecialchars(basename($_GET['name'])) : 'Nežinomas numeris';
 $short = isset($_GET['short']) ? htmlspecialchars(basename($_GET['short'])) : '';
 
 $dataExists = false;
@@ -10,15 +11,20 @@ $data = array(
     "phone" => "+37061600055",
     "name" => "IT'menas",
     "short" => "Informacinių technologijų specialistas",
-    "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁"
+    "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁",
+    "image" => "061600055.png"
   ),
   "112" => array(
     "phone" => "112",
     "name" => "Skubi pagalba",
     "short" => "Bendrasis pagalbos centras",
-    "description" => "Bendras telefono ryšio numeris, skirtas pranešti apie teisės pažeidimą, staiga iškilusią grėsmę gyvybei, sveikatai, saugumui, aplinkai ar turtui ir išsikviesti pagalbos tarnyboms: policijai, priešgaisrinei gelbėjimo tarnybai, greitajai medicinos pagalbai ar aplinkosaugai."
+    "description" => "Bendras telefono ryšio numeris, skirtas pranešti apie teisės pažeidimą, staiga iškilusią grėsmę gyvybei, sveikatai, saugumui, aplinkai ar turtui ir išsikviesti pagalbos tarnyboms: policijai, priešgaisrinei gelbėjimo tarnybai, greitajai medicinos pagalbai ar aplinkosaugai.",
+    "image" => "112.png"
   )
 );
+
+$description = "Telefono numeris nėra registruotas sistemoje. Jei esate šio numerio savininkas/valdytojas, galite <a>registruoti</a>.";
+$image = "https://skambink.tel/img/default.png";
 
 if( isset($data[$phone]) ) {
 
@@ -27,15 +33,16 @@ if( isset($data[$phone]) ) {
   $name = $data[$phone]["name"];
   $short = $data[$phone]["short"];
 
+  if( isset($data[$id]["image"]) ){
+    $image = "https://skambink.tel/img/" . $data[$phone]["image"];
+  }
+
   if( isset($data[$id]["description"]) ){
     $description = $data[$phone]["description"];
   } else {
     $description = "Jeigu esate šio telefono numerio savininkas/valdytojas, tuomet galite <a>nurodyti papildomą informaciją</a>.";
   }
 
-} else {
-  $name = "Nežinomas numeris";
-  $description = "Telefono numeris nėra registruotas sistemoje. Jei esate šio numerio savininkas/valdytojas, galite <a>registruoti</a>.";
 }
 
 $title = '';
@@ -72,7 +79,7 @@ if (strlen($short) > 0) {
         <meta property="og:type" content="website">
         <meta property="og:title" content="<?= $title ?>"/>
         <meta property="og:description" content="<?= $description ?>"/>
-        <meta property="og:image" content="https://skambink.tel/img/<?= $phone ?>.png"/>
+        <meta property="og:image" content="<?= $image ?>"/>
 
         <script src="https://kit.fontawesome.com/d51de49024.js" crossorigin="anonymous"></script>
 
@@ -93,7 +100,7 @@ if (strlen($short) > 0) {
     <body>
 
         <header>
-            <img id="profile" src="https://skambink.tel/img/<?= $phone ?>.png" alt="Header Image">
+            <img id="profile" src="<?= $image ?>" alt="Header Image">
             <div class="header-content">
                 <p id="description" style="visibility: hidden;"><?= $description ?></p>
                 <h2><?= $name ?><a href="#" class="light" onclick="toggle_visibility('description');"><i class="fa-solid fa-circle-info info"></i></a></h2>
