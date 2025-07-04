@@ -106,9 +106,9 @@ if (strlen($short) > 0) {
           </div>
           <!-- Skambinimo mygtukas -->
           <button
-            class="bg-green-500 hover:bg-green-600 rounded-full w-16 h-16 flex items-center justify-center text-3xl shadow-xl mt-10"
+            class="text-green-500 flex items-center justify-center text-3xl shadow-xl mt-10"
           >
-            📞
+            <i class="fa-solid fa-square-phone-flip"></i>
           </button>
         </div>
   </body>
