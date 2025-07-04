@@ -90,8 +90,6 @@ if (strlen($short) > 0) {
         <script src="https://kit.fontawesome.com/d51de49024.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://skambink.tel/styles.css?ver=0.2.v5d1ocfgj2fckd1">
-
         <style>
             :root {
                 --theme-color: #999999;
