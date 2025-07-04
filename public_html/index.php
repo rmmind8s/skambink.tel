@@ -92,7 +92,7 @@ if (strlen($short) > 0) {
 
     </head>
 
-  <body class="bg-black flex items-center justify-center h-screen">
+  <body class="bg-gradient-to-b from-gray-600 to-gray-50 flex items-center justify-center h-screen">
         <div class="flex flex-col items-center space-y-6 text-white">
           <!-- Kontaktas -->
           <img
@@ -101,8 +101,8 @@ if (strlen($short) > 0) {
             class="w-32 h-32 rounded-full border-4 border-gray-300 shadow"
           />
           <div class="text-center">
-            <h2 class="text-2xl font-semibold"><?= $name ?></h2>
-            <p class="text-gray-300 mt-1"><?= $short ?></p>
+            <h2 class="text-2xl font-semibold text-gray-900"><?= $name ?></h2>
+            <p class="text-gray-800 mt-1"><?= $short ?></p>
           </div>
           <!-- Skambinimo mygtukas -->
           <button
