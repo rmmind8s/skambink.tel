@@ -12,7 +12,7 @@ $data = array(
     "short" => "Informacinių technologijų specialistas",
     "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁"
   )
-)
+);
 
 $name = "Nežinomas numeris";
 $description = "Telefono numeris nėra registruotas sistemoje. Jei esate šio numerio savininkas/valdytojas, galite <a>registruoti</a>.";
