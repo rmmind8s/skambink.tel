@@ -12,7 +12,7 @@ $data = array(
     "name" => "IT'menas",
     "short" => "Informacinių technologijų specialistas",
     "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁",
-    "image" => "061600055.png"
+    "image" => "061600055.jpg"
   ),
   "112" => array(
     "phone" => "112",
