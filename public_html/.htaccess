@@ -12,9 +12,9 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
 # Dynamic segment-based routing
-RewriteRule ^([^/]+)/([^/]+)/([^/]+)/?$ index.php?phone=$1&name=$2&short=$3 [QSA,L]
-RewriteRule ^([^/]+)/([^/]+)/?$ index.php?phone=$1&name=$2 [QSA,L]
-RewriteRule ^([^/]+)/?$ index.php?phone=$1 [QSA,L]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/?$ index.php?phone=$1&name=$2&short=$3 [QSA,L,B]
+RewriteRule ^([^/]+)/([^/]+)/?$ index.php?phone=$1&name=$2 [QSA,L,B]
+RewriteRule ^([^/]+)/?$ index.php?phone=$1 [QSA,L,B]
 
 
 #RewriteCond %{HTTP_HOST} skambink\.tel [NC]
