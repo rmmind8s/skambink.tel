@@ -5,6 +5,7 @@ $name = isset($_GET['name']) ? htmlspecialchars(basename($_GET['name'])) : 'Než
 $short = isset($_GET['short']) ? htmlspecialchars(basename($_GET['short'])) : '';
 
 $dataExists = false;
+$smsDisable = false;
 
 $data = array(
   "061600055" => array(
@@ -17,7 +18,8 @@ $data = array(
     "name" => "Skubi pagalba",
     "short" => "Bendrasis pagalbos centras",
     "description" => "Bendras telefono ryšio numeris, skirtas pranešti apie teisės pažeidimą, staiga iškilusią grėsmę gyvybei, sveikatai, saugumui, aplinkai ar turtui ir išsikviesti pagalbos tarnyboms: policijai, priešgaisrinei gelbėjimo tarnybai, greitajai medicinos pagalbai ar aplinkosaugai.",
-    "image" => "112.png"
+    "image" => "112.png",
+    "smsDisable" => true
   )
 );
 
@@ -39,6 +41,10 @@ if( isset($data[$phone]) ) {
     $description = $data[$phone]["description"];
   } else {
     $description = "Jeigu esate šio telefono numerio savininkas/valdytojas, tuomet galite <a>nurodyti papildomą informaciją</a>.";
+  }
+
+  if( isset($data[$phone]["smsDisable"]) ){
+    $smsDisable = $data[$phone]["smsDisable"];
   }
 
 }
@@ -82,6 +88,7 @@ if (strlen($short) > 0) {
         <meta property="og:image" content="<?= $image ?>"/>
 
         <script src="https://kit.fontawesome.com/d51de49024.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://skambink.tel/styles.css?ver=0.2.v5d1ocfgj2fckd1">
 
@@ -112,7 +119,9 @@ if (strlen($short) > 0) {
             <h1> <span id="phone"><?= $phone ?></span><a id="copy" href="#" onclick="copy('phone');return false;"><i class="fa-solid fa-copy"></i></a></h1>
             <ul>
                 <li id="tel"><a href="tel:<?= $phpne ?>"><i class="fa-solid fa-square-phone-flip"></i></a></li>
+                <?php if( !$smsDisable ) ): ?>
                 <li id="sms" class="messenger" ><a href="sms:<?= $phpne ?>"><i class="fa-solid fa-comment-sms"></i></a></li>
+                <?php endif; ?>
             </ul>
 
         </main>
