@@ -117,26 +117,44 @@ if (strlen($short) > 0) {
           <p class="mt-1"><?= $short ?></p>
         </div>
       </div>
-      <h1 class="text-4xl font-bold"><?= $phone ?> <i class="fa-solid fa-copy"></i></h1>
+      <h1 class="text-3xl font-semibold text-gray-900"><?= $phone ?> <a id="copy" href="#" onclick="copyToClipboard('<?= $phone ?>');return false;"><i class="fa-solid fa-copy"></i></a></h1>
       <!-- Skambinimo mygtukas -->
       <button
         class="text-green-500 flex items-center justify-center text-7xl shadow-xl mt-10"
       >
-        <i class="fa-solid fa-square-phone-flip"></i>
+        <a href="tel:<?= $phone ?>"><i class="fa-solid fa-square-phone-flip"></i></a>
       </button>
       <?php if( !$smsDisable ): ?>
         <button
           class="text-blue-500 flex items-center justify-center text-3xl shadow-xl mt-10"
         >
-          <i class="fa-solid fa-comment-sms"></i>
+          <a href="sms:<?= $phone ?>"><i class="fa-solid fa-comment-sms"></i></a>
         </button>
       <?php endif; ?>
 
     </div>
 
+    <div id="copyMessageBox" class="fixed bottom-4 max-w-md w-3/4 left-1/2 transform -translate-x-1/2 text-center bg-gray-700 text-white px-6 py-3 rounded-lg shadow-lg opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+      <span id="copyMessage">Nukopijuota!</span>
+    </div>
+
     <footer class="fixed bottom-0 left-0 w-full text-center py-4 text-gray-800 text-sm">
       Skambink.TEL
     </footer>
+
+    <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        const msgBox = document.getElementById('copyMessageBox');
+        const msg = document.getElementById('copyMessage');
+        msg.textContent = "Nukopijuota: " + text;
+        msgBox.classList.remove('opacity-0');
+        setTimeout(() => {
+          msgBox.classList.add('opacity-0');
+        }, 2700);
+      });
+    }
+    </script>
   </body>
 
 </html>
