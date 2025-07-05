@@ -30,7 +30,7 @@ $data = array(
   )
 );
 
-$description = "Telefono numeris nėra registruotas sistemoje, todėl papildoma informacija gali būti netiksli. Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį:";
+$description = "Telefono numeris nėra registruotas sistemoje, todėl papildoma informacija gali būti netiksli. Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį";
 $image = "https://skambink.tel/img/default.png";
 
 if( isset($data[$phone]) ) {
