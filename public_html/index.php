@@ -117,7 +117,7 @@ if (strlen($short) > 0) {
           <p class="mt-1"><?= $short ?></p>
         </div>
       </div>
-      <h1 class="text-3xl font-semibold text-gray-900"><?= $phone ?> <a id="copy" href="#" onclick="copyToClipboard('<?= $phone ?>');return false;"><i class="fa-solid fa-copy"></i></a></h1>
+      <h1 class="text-3xl font-semibold text-gray-900"><?= $phone ?> <a id="copy" href="#" onclick="copyToClipboard('<?= $phone ?>');return false;" class="text-gray-600"><i class="fa-solid fa-copy"></i></a></h1>
       <!-- Skambinimo mygtukas -->
       <button
         class="text-green-500 flex items-center justify-center text-7xl mt-10"
@@ -126,7 +126,7 @@ if (strlen($short) > 0) {
       </button>
       <?php if( !$smsDisable ): ?>
         <button
-          class="text-blue-500 flex items-center justify-center text-4xl shadow-xl mt-10"
+          class="text-blue-500 flex items-center justify-center text-4xl mt-10"
         >
           <a href="sms:<?= $phone ?>"><i class="fa-solid fa-comment-sms"></i></a>
         </button>
