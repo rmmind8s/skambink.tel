@@ -12,7 +12,7 @@ $data = array(
   "061600055" => array(
     "name" => "IT'menas",
     "short" => "#Kūrimas #Vystymas #Patikra",
-    "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁<br><br>✪ Interneto vardai (.lt, .eu, .com ir kt.)<br>✪ Interneto svetainės<br>✪ Elektroninė prekyba<br>✪ Socialiniai tinklai<br>✪ Pokalbių robotai (chatbots)",
+    "description" => "<p>Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁</p><p>✪ Interneto vardai (.lt, .eu, .com ir kt.)<br>✪ Interneto svetainės<br>✪ Elektroninė prekyba<br>✪ Socialiniai tinklai<br>✪ Pokalbių robotai (chatbots)</p>",
     "image" => "061600055.jpg"
   ),
   "067466042" => array(
