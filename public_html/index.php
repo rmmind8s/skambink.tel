@@ -158,11 +158,11 @@ if (strlen($short) > 0) {
       <div onclick="event.stopPropagation()" class="relative bg-white rounded-2xl shadow-xl max-w-md w-full p-6 text-center space-y-4">
 
         <!-- Uždarymo mygtukas -->
-        <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl leading-none focus:outline-none">
+        <button onclick="closeModal()" class="absolute top-1 right-2 text-gray-400 hover:text-gray-600 text-2xl leading-none focus:outline-none">
           &times;
         </button>
 
-        <p class="text-gray-600" id="modalMessage"><?= $description ?></p>
+        <p class="text-gray-600" style="margin-top:0;" id="modalMessage"><?= $description ?></p>
       </div>
     </div>
 
