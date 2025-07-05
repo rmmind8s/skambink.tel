@@ -119,8 +119,8 @@ if (strlen($short) > 0) {
           />
         </div>
         <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-2">
-          <h2 class="text-2xl font-semibold"><?= $name ?></h2>
-          <p class="mt-1"><?= $short ?></p>
+          <h2 class="text-2xl font-semibold"><?= htmlspecialchars($name) ?></h2>
+          <p class="mt-1"><?= htmlspecialchars($short) ?></p>
         </div>
       </div>
       <h1 class="text-3xl font-semibold text-gray-900 flex items-center"><?= $phone ?>
@@ -163,7 +163,7 @@ if (strlen($short) > 0) {
 
     function share() {
 
-      const allData = "<?= $phone ?>\n<?= $name ?><?= $short ? '\n' . $short  : "" ?>";
+      const allData = "<?= $phone ?>\n<?= htmlspecialchars($name) ?><?= $short ? '\n' . htmlspecialchars($short)  : "" ?>";
 
       if (navigator.share) {
         navigator.share({
