@@ -102,12 +102,17 @@ if (strlen($short) > 0) {
     </head>
 
   <body class="bg-gradient-to-b from-gray-300 to-gray-50 flex flex-col h-screen">
-        <div class="flex flex-col items-center justify-center flex-grow space-y-6">
+        <div class="flex flex-col items-center space-y-6">
           <!-- Kontaktas -->
           <img
             src="<?= $image ?>"
             alt="Adresato nuotrauka"
-            class="w-32 h-32 rounded-full border-4 border-gray-300 shadow"
+            class="
+              w-full
+              sm:max-w-[80vw]
+              aspect-square
+              border-4 border-gray-300 shadow
+            "
           />
           <div class="text-center">
             <h2 class="text-2xl font-semibold text-gray-900"><?= $name ?></h2>
