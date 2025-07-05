@@ -147,6 +147,10 @@ if (strlen($short) > 0) {
       <span id="copyMessage">Nukopijuota!</span>
     </div>
 
+    <footer class="w-full text-center py-4 text-gray-800 text-sm mt-auto">
+      <a href="./">Skambink.TEL</a>
+    </footer>
+    
     <script>
     function copyToClipboard(text) {
       navigator.clipboard.writeText(text).then(() => {
