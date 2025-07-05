@@ -117,7 +117,7 @@ if (strlen($short) > 0) {
           <p class="mt-1"><?= $short ?></p>
         </div>
       </div>
-
+      <h1 class="text-4xl font-bold"><?= $phone ?> <i class="fa-solid fa-copy"></i></h1>
       <!-- Skambinimo mygtukas -->
       <button
         class="text-green-500 flex items-center justify-center text-7xl shadow-xl mt-10"
@@ -131,6 +131,7 @@ if (strlen($short) > 0) {
           <i class="fa-solid fa-comment-sms"></i>
         </button>
       <?php endif; ?>
+
     </div>
 
     <footer class="fixed bottom-0 left-0 w-full text-center py-4 text-gray-800 text-sm">
