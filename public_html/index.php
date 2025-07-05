@@ -30,7 +30,7 @@ $data = array(
   )
 );
 
-$description = "Telefono numeris nėra registruotas sistemoje. Jei esate šio numerio savininkas/valdytojas, galite <a class='text-gree-500 underline'' href='sms:+37061600055?body=Prašau užregistruoti mano telefono numerį sistemoje Skambink.TEL'>registruoti</a>.";
+$description = "Telefono numeris nėra registruotas sistemoje. Jei esate šio numerio savininkas/valdytojas, galite <a class='text-gree-500 underline' href='sms:+37061600055?body=Prašau užregistruoti mano telefono numerį sistemoje Skambink.TEL'>registruoti</a>.";
 $image = "https://skambink.tel/img/default.jpeg";
 
 if( isset($data[$phone]) ) {
