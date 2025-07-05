@@ -163,7 +163,7 @@ if (strlen($short) > 0) {
 
     function share() {
 
-      const allData = "<?= $phone ?>\n<?= $name ?><?= $msg ? '\n' . $short  : "" ?>";
+      const allData = "<?= $phone ?>\n<?= $name ?><?= $short ? '\n' . $short  : "" ?>";
 
       if (navigator.share) {
         navigator.share({
@@ -177,7 +177,7 @@ if (strlen($short) > 0) {
         alert('Naršyklė nepalaiko dalijimosi funkcijos.');
       }
     }
-    
+
     </script>
   </body>
 
