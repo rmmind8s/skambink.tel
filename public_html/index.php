@@ -115,7 +115,7 @@ if (strlen($short) > 0) {
         </style>
     </head>
 
-    <body class="bg-gradient-to-b from-gray-300 to-gray-50 flex flex-col h-screen">
+    <body class="bg-gradient-to-b from-gray-300 to-gray-50 flex flex-col">
     <div class="flex flex-col items-center justify-center space-y-6">
       <!-- Kontaktas -->
       <div class="relative w-full max-w-md">
@@ -148,7 +148,7 @@ if (strlen($short) > 0) {
         </button>
       <?php endif; ?>
 
-      <a href="#" onclick="return false;" class="text-gray-700 ml-2 text-xl"><i class="fa-solid fa-share-nodes"></i></a>
+      <a href="#" onclick="return false;" class="text-gray-300 text-xl"><i class="fa-solid fa-share-nodes"></i></a>
 
     </div>
 
