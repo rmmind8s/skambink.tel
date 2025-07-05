@@ -167,7 +167,7 @@ if (strlen($short) > 0) {
 
       if (navigator.share) {
         navigator.share({
-          title: '<?= $title ?>',
+          title: '<?= json_encode($title) ?>',
           text: allData,
           url: window.location.href
         }).catch((err) => {
