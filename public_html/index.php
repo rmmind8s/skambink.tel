@@ -120,13 +120,13 @@ if (strlen($short) > 0) {
       <h1 class="text-3xl font-semibold text-gray-900"><?= $phone ?> <a id="copy" href="#" onclick="copyToClipboard('<?= $phone ?>');return false;"><i class="fa-solid fa-copy"></i></a></h1>
       <!-- Skambinimo mygtukas -->
       <button
-        class="text-green-500 flex items-center justify-center text-7xl shadow-xl mt-10"
+        class="text-green-500 flex items-center justify-center text-7xl mt-10"
       >
         <a href="tel:<?= $phone ?>"><i class="fa-solid fa-square-phone-flip"></i></a>
       </button>
       <?php if( !$smsDisable ): ?>
         <button
-          class="text-blue-500 flex items-center justify-center text-3xl shadow-xl mt-10"
+          class="text-blue-500 flex items-center justify-center text-4xl shadow-xl mt-10"
         >
           <a href="sms:<?= $phone ?>"><i class="fa-solid fa-comment-sms"></i></a>
         </button>
@@ -139,7 +139,7 @@ if (strlen($short) > 0) {
     </div>
 
     <footer class="fixed bottom-0 left-0 w-full text-center py-4 text-gray-800 text-sm">
-      Skambink.TEL
+      <a href="./">Skambink.TEL</a>
     </footer>
 
     <script>
