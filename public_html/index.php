@@ -31,7 +31,7 @@ $data = array(
 );
 
 $description = "Telefono numeris nėra registruotas sistemoje, todėl papildoma informacija gali būti netiksli. Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį <a class='text-gree-500 underline' href='sms:+37061600055?body=Prašau užregistruoti mano telefono numerį sistemoje Skambink.TEL'>užregistruoti</a>.";
-$image = "https://skambink.tel/img/default.jpeg";
+$image = "https://skambink.tel/img/default.png";
 
 if( isset($data[$phone]) ) {
 
@@ -158,7 +158,7 @@ if (strlen($short) > 0) {
       <div onclick="event.stopPropagation()" class="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 text-center space-y-4">
         <p class="text-gray-600" id="modalMessage"><?= $description ?></p>
         <button onclick="closeModal()" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">
-          <i class="fa-solid fa-check"></i>
+          <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
     </div>
