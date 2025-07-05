@@ -31,7 +31,7 @@ $data = array(
 );
 
 $description = "Telefono numeris nėra registruotas sistemoje. Jei esate šio numerio savininkas/valdytojas, galite <a>registruoti</a>.";
-$image = "https://skambink.tel/img/default.png";
+$image = "https://skambink.tel/img/default.jpeg";
 
 if( isset($data[$phone]) ) {
 
@@ -121,7 +121,7 @@ if (strlen($short) > 0) {
         </div>
         <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-2">
           <h2 class="text-2xl font-semibold"><?= htmlspecialchars($name) ?>
-            <a href="#" onclick="showModal('<?= $description ?>')" class="ml-2 text-xl text-green-500"><i class="fa-solid fa-check"></i></a></h2>
+            <a href="#" onclick="showModal('<?= $description ?>')" class="ml-1 text-xl"><?= $dataExists ? '<i class="fa-solid fa-check text-green-500"></i>' : '<i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>' ?></a></h2>
           <p class="mt-1"><?= htmlspecialchars($short) ?></p>
         </div>
       </div>
@@ -162,7 +162,7 @@ if (strlen($short) > 0) {
 
     <script>
       function showModal(message) {
-        document.getElementById('modalMessage').textContent = message;
+        document.getElementById('modalMessage').innerHTML = message;
         document.getElementById('modal').classList.remove('hidden');
       }
 
