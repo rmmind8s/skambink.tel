@@ -148,7 +148,7 @@ if (strlen($short) > 0) {
         </button>
       <?php endif; ?>
 
-      <a href="#" onclick="return false;" class="text-gray-300 text-xl"><i class="fa-solid fa-share-nodes"></i></a>
+      <a href="#" onclick="share();return false;" class="text-gray-300 text-xl"><i class="fa-solid fa-share-nodes"></i></a>
 
     </div>
 
@@ -167,6 +167,23 @@ if (strlen($short) > 0) {
           msgBox.classList.add('opacity-0');
         }, 2700);
       });
+    }
+
+    function share() {
+
+      const allData = "<?= $phone ?>\n<?= $name ?><?= $msg ? '\n' . $short  : "" ?>";
+
+      if (navigator.share) {
+        navigator.share({
+          title: '<?= $title ?>',
+          text: allData,
+          url: window.location.href
+        }).catch((err) => {
+          console.error('Dalijimosi klaida:', err);
+        });
+      } else {
+        alert('Naršyklė nepalaiko dalijimosi funkcijos.');
+      }
     }
     </script>
   </body>
