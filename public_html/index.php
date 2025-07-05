@@ -158,7 +158,7 @@ if (strlen($short) > 0) {
       <div onclick="event.stopPropagation()" class="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 text-center space-y-4">
         <p class="text-gray-600" id="modalMessage"><?= $description ?></p>
         <button onclick="closeModal()" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">
-          Uždaryti
+          <i class="fa-solid fa-check"></i>
         </button>
       </div>
     </div>
