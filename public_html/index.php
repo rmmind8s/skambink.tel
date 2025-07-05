@@ -104,15 +104,20 @@ if (strlen($short) > 0) {
     <body class="bg-gradient-to-b from-gray-300 to-gray-50 flex flex-col h-screen">
     <div class="flex flex-col items-center justify-center space-y-6">
       <!-- Kontaktas -->
-      <img
-        src="<?= $image ?>"
-        alt="Adresato nuotrauka"
-        class="w-full max-w-md aspect-square border-4 border-gray-300 shadow"
-      />
-      <div class="text-center">
-        <h2 class="text-2xl font-semibold text-gray-900"><?= $name ?></h2>
-        <p class="text-gray-800 mt-1"><?= $short ?></p>
+      <div class="relative w-full max-w-md aspect-square">
+        <img
+          src="<?= $image ?>"
+          alt="Adresato nuotrauka"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-2"
+        >
+          <h2 class="text-2xl font-semibold"><?= $name ?></h2>
+          <p class="mt-1"><?= $short ?></p>
+        </div>
       </div>
+
       <!-- Skambinimo mygtukas -->
       <button
         class="text-green-500 flex items-center justify-center text-7xl shadow-xl mt-10"
