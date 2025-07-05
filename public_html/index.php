@@ -121,7 +121,7 @@ if (strlen($short) > 0) {
         </div>
         <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-2">
           <h2 class="text-2xl font-semibold"><?= htmlspecialchars($name) ?>
-            <a href="#" onclick="showModal()" class="ml-1 text-xl"><?= $dataExists ? '<i class="fa-solid fa-check text-green-500"></i>' : '<i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>' ?></a></h2>
+            <a href="#" onclick="showModal()" class="ml-1 text-xl"><?= $dataExists ? '<i class="fa-solid fa-circle-infovopasity-50"></i></i>' : '<i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>' ?></a></h2>
           <p class="mt-1"><?= htmlspecialchars($short) ?></p>
         </div>
       </div>
@@ -155,7 +155,13 @@ if (strlen($short) > 0) {
     <!-- Modal fonas -->
     <div id="modal" onclick="closeModal()" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
       <!-- Modal langas -->
-      <div onclick="event.stopPropagation()" class="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 text-center space-y-4">
+      <div onclick="event.stopPropagation()" class="relative bg-white rounded-2xl shadow-xl max-w-md w-full p-6 text-center space-y-4">
+
+        <!-- Uždarymo mygtukas -->
+        <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl leading-none focus:outline-none">
+          &times;
+        </button>
+
         <p class="text-gray-600" id="modalMessage"><?= $description ?></p>
       </div>
     </div>
