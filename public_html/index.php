@@ -120,7 +120,7 @@ if (strlen($short) > 0) {
           />
         </div>
         <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-2">
-          <h2 class="text-2xl font-semibold"><?= htmlspecialchars($name) ?></h2>
+          <h2 class="text-2xl font-semibold"><?= htmlspecialchars($name) ?><a href="#" class="ml-2 opacity-50"><i class="fa-solid fa-circle-info"></i></a></h2>
           <p class="mt-1"><?= htmlspecialchars($short) ?></p>
         </div>
       </div>
