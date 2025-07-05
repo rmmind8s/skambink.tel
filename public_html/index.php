@@ -94,7 +94,7 @@ if (strlen($short) > 0) {
         <meta property="og:image" content="<?= $image ?>"/>
 
         <script src="https://kit.fontawesome.com/d51de49024.js" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.0/tailwind.min.css" rel="stylesheet">
 
         <style>
         :root {
