@@ -133,7 +133,6 @@ if (strlen($short) > 0) {
       </div>
       <h1 class="text-3xl font-semibold text-gray-900 flex items-center"><?= $phone ?>
         <a href="#" onclick="copyToClipboard('<?= $phone ?>');return false;" class="text-gray-700 ml-2 text-xl"><i class="fa-solid fa-copy"></i></a>
-        <a href="#" onclick="return false;" class="text-gray-700 ml-2 text-xl"><i class="fa-solid fa-share-nodes"></i></a>
       </h1>
       <!-- Skambinimo mygtukas -->
       <button
@@ -149,15 +148,13 @@ if (strlen($short) > 0) {
         </button>
       <?php endif; ?>
 
+      <a href="#" onclick="return false;" class="text-gray-700 ml-2 text-xl"><i class="fa-solid fa-share-nodes"></i></a>
+
     </div>
 
     <div id="copyMessageBox" class="fixed bottom-4 max-w-md w-3/4 left-1/2 transform -translate-x-1/2 text-center bg-gray-700 text-white px-6 py-3 rounded-lg shadow-lg opacity-0 transition-opacity duration-300 pointer-events-none z-50">
       <span id="copyMessage">Nukopijuota!</span>
     </div>
-
-    <footer class="fixed bottom-0 left-0 w-full text-center py-4 text-gray-800 text-sm">
-      <a href="./">Skambink.TEL</a>
-    </footer>
 
     <script>
     function copyToClipboard(text) {
