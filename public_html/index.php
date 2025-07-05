@@ -165,7 +165,7 @@ if (strlen($short) > 0) {
         <p class="text-gray-600" style="margin-top:0;" id="modalMessage"><?= $description ?></p>
 
         <?php if( !$dataExists ): ?>
-        <a href="sms:+37061600055?body=Prašau užregistruoti mano telefono numerį sistemoje Skambink.TEL" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">Užregistruoti</a>
+        <button onclick="location.href=sms:+37061600055?body=Prašau užregistruoti mano telefono numerį sistemoje Skambink.TEL" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">Užregistruoti</button>
         <?php endif; ?>
 
       </div>
