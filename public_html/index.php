@@ -1,6 +1,7 @@
 <?php
 
-$phone = isset($_GET['phone']) ? htmlspecialchars(basename($_GET['phone'])) : '112';
+$phoneGet = isset($_GET['phone']) ? htmlspecialchars(basename($_GET['phone'])) : '112';
+$phone = $phoneGet;
 $name = isset($_GET['name']) ? htmlspecialchars(basename($_GET['name'])) : 'Nežinomas numeris';
 $short = isset($_GET['short']) ? htmlspecialchars(basename($_GET['short'])) : '';
 
@@ -87,7 +88,7 @@ if (strlen($short) > 0) {
         <meta name="apple-mobile-web-app-title" content="Skambink.TEL" />
         <link rel="manifest" href="https://skambink.tel/fav/site.webmanifest" />
 
-        <meta property="og:url" content="https://skambink.tel/<?= $phone ?>">
+        <meta property="og:url" content="https://skambink.tel/<?= $phoneGet ?>">
         <meta property="og:type" content="website">
         <meta property="og:title" content="<?= $title ?>"/>
         <meta property="og:description" content="<?= $description ?>"/>
