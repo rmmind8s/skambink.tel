@@ -95,14 +95,6 @@ if (strlen($short) > 0) {
 
         <script src="https://kit.fontawesome.com/d51de49024.js" crossorigin="anonymous"></script>
         <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-          tailwind.config = {
-            theme: {
-              extend: {},
-            },
-            plugins: [tailwindcssAspectRatio],
-          }
-        </script>
 
         <style>
         :root {
@@ -185,6 +177,7 @@ if (strlen($short) > 0) {
         alert('Naršyklė nepalaiko dalijimosi funkcijos.');
       }
     }
+    
     </script>
   </body>
 
