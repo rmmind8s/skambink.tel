@@ -94,8 +94,16 @@ if (strlen($short) > 0) {
         <meta property="og:image" content="<?= $image ?>"/>
 
         <script src="https://kit.fontawesome.com/d51de49024.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
-
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {},
+            },
+            plugins: [tailwindcssAspectRatio],
+          }
+        </script>
+        
         <style>
         :root {
           --color-green-500: #28A745;
