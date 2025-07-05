@@ -121,7 +121,7 @@ if (strlen($short) > 0) {
         </div>
         <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-2">
           <h2 class="text-2xl font-semibold"><?= htmlspecialchars($name) ?>
-            <a href="#" onclick="showModal()" class="ml-1 text-xl"><?= $dataExists ? '<i class="fa-solid fa-circle-infovopasity-50"></i></i>' : '<i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>' ?></a></h2>
+            <a href="#" onclick="showModal()" class="ml-1 text-xl"><?= $dataExists ? '<i class="fa-solid fa-circle-info opasity-50"></i></i>' : '<i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>' ?></a></h2>
           <p class="mt-1"><?= htmlspecialchars($short) ?></p>
         </div>
       </div>
