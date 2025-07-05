@@ -140,8 +140,6 @@ if (strlen($short) > 0) {
         </button>
       <?php endif; ?>
 
-      <a href="#" onclick="share();return false;" class="text-gray-300 text-xl"><i class="fa-solid fa-share-nodes"></i></a>
-
     </div>
 
     <div id="copyMessageBox" class="fixed bottom-4 max-w-md w-3/4 left-1/2 transform -translate-x-1/2 text-center bg-gray-700 text-white px-6 py-3 rounded-lg shadow-lg opacity-0 transition-opacity duration-300 pointer-events-none z-50">
@@ -160,24 +158,6 @@ if (strlen($short) > 0) {
         }, 2700);
       });
     }
-
-    function share() {
-
-      const allData = "<?= $phone ?>\n<?= htmlspecialchars($name) ?><?= $short ? '\n' . htmlspecialchars($short)  : "" ?>";
-
-      if (navigator.share) {
-        navigator.share({
-          title: <?= json_encode($title) ?>,
-          text: allData,
-          url: window.location.href
-        }).catch((err) => {
-          console.error('Dalijimosi klaida:', err);
-        });
-      } else {
-        alert('Naršyklė nepalaiko dalijimosi funkcijos.');
-      }
-    }
-
     </script>
   </body>
 
