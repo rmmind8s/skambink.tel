@@ -11,7 +11,7 @@ $smsDisable = false;
 $data = array(
   "061600055" => array(
     "name" => "IT'menas",
-    "short" => "Informacinių technologijų specialistas",
+    "short" => "#Kūrimas #Vystymas #Patikra",
     "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁",
     "image" => "061600055.jpg"
   ),
@@ -121,7 +121,7 @@ if (strlen($short) > 0) {
         </div>
         <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-2">
           <h2 class="text-2xl font-semibold"><?= htmlspecialchars($name) ?>
-            <a href="#" onclick="showModal('title', 'message')" class="ml-2 opacity-50 text-xl"><i class="fa-solid fa-circle-info"></i></a></h2>
+            <a href="#" onclick="showModal('<?= $description ?>')" class="ml-2 opacity-50 text-xl text-green-500"><i class="fa-solid fa-check"></i></a></h2>
           <p class="mt-1"><?= htmlspecialchars($short) ?></p>
         </div>
       </div>
@@ -156,7 +156,6 @@ if (strlen($short) > 0) {
     <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
       <!-- Modal langas -->
       <div class="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 text-center space-y-4">
-        <h2 class="text-xl font-semibold text-gray-800" id="modalTitle">Pranešimas</h2>
         <p class="text-gray-600" id="modalMessage">Čia bus rodomas pranešimo tekstas.</p>
         <button onclick="closeModal()" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">
           Gerai
@@ -165,8 +164,7 @@ if (strlen($short) > 0) {
     </div>
 
     <script>
-      function showModal(title, message) {
-        document.getElementById('modalTitle').textContent = title;
+      function showModal(message) {
         document.getElementById('modalMessage').textContent = message;
         document.getElementById('modal').classList.remove('hidden');
       }
