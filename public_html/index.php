@@ -111,11 +111,13 @@ if (strlen($short) > 0) {
     <div class="flex flex-col items-center justify-center space-y-6">
       <!-- Kontaktas -->
       <div class="relative w-full max-w-md">
-        <img
-          src="<?= $image ?>"
-          alt="Adresato nuotrauka"
-          class="w-full object-cover"
-        />
+        <div class="aspect-square w-full overflow-hidden">
+          <img
+            src="<?= $image ?>"
+            alt="Adresato nuotrauka"
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
         <div
           class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-2"
         >
