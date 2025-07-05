@@ -117,7 +117,7 @@ if (strlen($short) > 0) {
           <p class="mt-1"><?= $short ?></p>
         </div>
       </div>
-      <h1 class="text-3xl font-semibold text-gray-900"><?= $phone ?> <a id="copy" href="#" onclick="copyToClipboard('<?= $phone ?>');return false;" class="text-gray-600"><i class="fa-solid fa-copy"></i></a></h1>
+      <h1 class="text-3xl font-semibold text-gray-900"><?= $phone ?> <a id="copy" href="#" onclick="copyToClipboard('<?= $phone ?>');return false;" class="text-gray-500"><i class="fa-solid fa-copy"></i></a></h1>
       <!-- Skambinimo mygtukas -->
       <button
         class="text-green-500 flex items-center justify-center text-7xl mt-10"
