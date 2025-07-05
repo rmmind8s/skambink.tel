@@ -121,7 +121,7 @@ if (strlen($short) > 0) {
         </div>
         <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-2">
           <h2 class="text-2xl font-semibold"><?= htmlspecialchars($name) ?>
-            <a href="#" onclick="showModal('<?= $description ?>')" class="ml-1 text-xl"><?= $dataExists ? '<i class="fa-solid fa-check text-green-500"></i>' : '<i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>' ?></a></h2>
+            <a href="#" onclick="showModal()" class="ml-1 text-xl"><?= $dataExists ? '<i class="fa-solid fa-check text-green-500"></i>' : '<i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>' ?></a></h2>
           <p class="mt-1"><?= htmlspecialchars($short) ?></p>
         </div>
       </div>
@@ -156,13 +156,12 @@ if (strlen($short) > 0) {
     <div id="modal" onclick="closeModal()" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
       <!-- Modal langas -->
       <div onclick="event.stopPropagation()" class="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 text-center space-y-4">
-        <p class="text-gray-600" id="modalMessage">Čia bus rodomas pranešimo tekstas.</p>
+        <p class="text-gray-600" id="modalMessage"><?= $description ?></p>
       </div>
     </div>
 
     <script>
       function showModal(message) {
-        document.getElementById('modalMessage').innerHTML = message;
         document.getElementById('modal').classList.remove('hidden');
       }
 
