@@ -101,42 +101,36 @@ if (strlen($short) > 0) {
         </style>
     </head>
 
-  <body class="bg-gradient-to-b from-gray-300 to-gray-50 flex flex-col h-screen">
-        <div class="flex flex-col items-center space-y-6">
-          <!-- Kontaktas -->
-          <img
-            src="<?= $image ?>"
-            alt="Adresato nuotrauka"
-            class="
-              w-full
-              sm:max-w-[80vw]
-              aspect-square
-              border-4 border-gray-300 shadow
-            "
-          />
-          <div class="text-center">
-            <h2 class="text-2xl font-semibold text-gray-900"><?= $name ?></h2>
-            <p class="text-gray-800 mt-1"><?= $short ?></p>
-          </div>
-          <!-- Skambinimo mygtukas -->
-          <button
-            class="text-green-500 flex items-center justify-center text-7xl shadow-xl mt-10"
-          >
-            <i class="fa-solid fa-square-phone-flip"></i>
-          </button>
-          <?php if( !$smsDisable ): ?>
-            <button
-              class="text-blue-500 flex items-center justify-center text-3xl shadow-xl mt-10"
-            >
-              <i class="fa-solid fa-comment-sms"></i>
-            </button>
-          <?php endif; ?>
-        </div>
+    <body class="bg-gradient-to-b from-gray-300 to-gray-50 flex flex-col h-screen">
+    <div class="flex flex-col items-center justify-center space-y-6">
+      <!-- Kontaktas -->
+      <img
+        src="<?= $image ?>"
+        alt="Adresato nuotrauka"
+        class="w-full max-w-md aspect-square border-4 border-gray-300 shadow"
+      />
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold text-gray-900"><?= $name ?></h2>
+        <p class="text-gray-800 mt-1"><?= $short ?></p>
+      </div>
+      <!-- Skambinimo mygtukas -->
+      <button
+        class="text-green-500 flex items-center justify-center text-7xl shadow-xl mt-10"
+      >
+        <i class="fa-solid fa-square-phone-flip"></i>
+      </button>
+      <?php if( !$smsDisable ): ?>
+        <button
+          class="text-blue-500 flex items-center justify-center text-3xl shadow-xl mt-10"
+        >
+          <i class="fa-solid fa-comment-sms"></i>
+        </button>
+      <?php endif; ?>
+    </div>
 
-        <footer class="fixed bottom-0 left-0 w-full text-center py-4 text-gray-800 text-sm">
-          Skambink.TEL
-        </footer>
-
+    <footer class="fixed bottom-0 left-0 w-full text-center py-4 text-gray-800 text-sm">
+      Skambink.TEL
+    </footer>
   </body>
 
 </html>
