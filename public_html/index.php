@@ -14,6 +14,12 @@ $data = array(
     "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁",
     "image" => "061600055.jpg"
   ),
+  "067466042" => array(
+    "name" => "Lietuvos Caritas",
+    "short" => "Tarptautinė katalikiška organizacija",
+    "description" => "Lietuvos Caritas koordinuoja Caritas veiklą Lietuvoje, atstovauja organizacijai nacionaliniu lygiu ir užsienyje, gina pažeidžiamųjų interesus.",
+    "image" => "caritas.png"
+  ),
   "112" => array(
     "name" => "Skubi pagalba",
     "short" => "Bendrasis pagalbos centras",
