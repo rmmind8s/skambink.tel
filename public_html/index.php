@@ -87,7 +87,7 @@ if (strlen($short) > 0) {
         <meta name="apple-mobile-web-app-title" content="Skambink.TEL" />
         <link rel="manifest" href="https://skambink.tel/fav/site.webmanifest" />
 
-        <meta property="og:url" content="https://skambink.tel/<?= $phone . "/" . $short ?>">
+        <meta property="og:url" content="https://skambink.tel/<?= $phone ?>">
         <meta property="og:type" content="website">
         <meta property="og:title" content="<?= $title ?>"/>
         <meta property="og:description" content="<?= $description ?>"/>
