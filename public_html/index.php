@@ -8,12 +8,15 @@ $short = isset($_GET['short']) ? htmlspecialchars(basename($_GET['short'])) : ''
 $dataExists = false;
 $smsDisable = false;
 
+$messenger = null;
+
 $data = array(
   "061600055" => array(
     "name" => "IT'menas",
     "short" => "Informacinių sistemų specialistas",
     "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁",
-    "image" => "061600055.jpg"
+    "image" => "061600055.jpg",
+    "messenger" => "itmenas"
   ),
   "067466042" => array(
     "name" => "Lietuvos Caritas",
@@ -41,6 +44,10 @@ if( isset($data[$phone]) ) {
 
   if( isset($data[$phone]["image"]) ){
     $image = "https://skambink.tel/img/" . $data[$phone]["image"];
+  }
+
+  if( isset($data[$phone]["messenger"]) ){
+    $messenger = "https://m.me/" . $data[$phone]["messenger"];
   }
 
   if( isset($data[$phone]["description"]) ){
@@ -162,6 +169,14 @@ if (strlen($short) > 0) {
           class="text-blue-500 flex items-center justify-center text-4xl mt-10"
         >
           <a href="sms:<?= $phone ?>"><i class="fa-solid fa-comment-sms"></i></a>
+        </button>
+      <?php endif; ?>
+
+      <?php if( $messenger !== null ): ?>
+        <button
+          class="text-blue-500 flex items-center justify-center text-4xl mt-10"
+        >
+          <a href="<?= $messenger ?>"><i class="fa-brands fa-facebook-messenger"></i></a>
         </button>
       <?php endif; ?>
 
