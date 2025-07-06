@@ -133,15 +133,15 @@ if (strlen($short) > 0) {
 
             <a href="javascript:void(0)" onclick="showModal()" class="ml-1 text-xl">
               <?php if( $dataExists ): ?>
-                <i class="fa-solid fa-circle-info opacity-70"></i>
+                <i class="fa-solid fa-circle-info opacity-70 hover:opacity-100"></i>
               <?php else: ?>
-                <i class="fa-solid fa-triangle-exclamation text-yellow-500 opacity-70"></i>
+                <i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>
               <?php endif; ?>
             </a>
 
             <?php if( $dataExists ): ?>
               <a href="javascript:void(0)" onclick="share()" class="ml-1 text-xl">
-                <i class="fa-solid fa-share-nodes"></i>
+                <i class="fa-solid fa-share-nodes opacity-70 hover:opacity-100"></i>
               </a>
             <?php endif; ?>
 
