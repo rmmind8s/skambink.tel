@@ -15,8 +15,8 @@ $data = array(
     "name" => "IT'menas",
     "short" => "Informacinių sistemų specialistas",
     "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁",
-    "image" => "061600055.jpg",
-    "messenger" => "itmenas"
+    "image" => "061600055.jpg"//,
+    //"messenger" => "itmenas"
   ),
   "067466042" => array(
     "name" => "Lietuvos Caritas",
