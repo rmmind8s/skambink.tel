@@ -14,7 +14,7 @@ $data = array(
   "061600055" => array(
     "name" => "IT'menas",
     "short" => "Informacinių sistemų specialistas",
-    "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁ </p><p>Interneto vardai, svetainės, elektroninė prekyba, socialiniai tinklai, pokalbių robotai (chatbots).</p><p>#Kūrimas #Vystymas #Patikra",
+    "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁ Interneto vardai, svetainės, elektroninė prekyba, socialiniai tinklai, pokalbių robotai (chatbots). #Kūrimas #Vystymas #Patikra",
     "image" => "061600055.jpg"//,
     //"messenger" => "itmenas"
   ),
