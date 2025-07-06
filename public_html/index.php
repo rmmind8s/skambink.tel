@@ -148,9 +148,7 @@ if (strlen($short) > 0) {
           <p class="mt-1"><?= htmlspecialchars($short) ?></p>
         </div>
       </div>
-      <h1 class="text-3xl font-semibold text-gray-900 flex items-center"><?= $phone ?>
-        <a href="javascript:void(0);" onclick="copyToClipboard('<?= $phone ?>');return false;" class="text-gray-700 ml-2 text-xl"><i class="fa-solid fa-copy"></i></a>
-      </h1>
+      <h1 class="text-3xl font-semibold text-gray-900 flex items-center"><?= $phone ?></h1>
       <!-- Skambinimo mygtukas -->
       <button
         class="text-green-500 flex items-center justify-center text-7xl mt-10"
@@ -172,7 +170,7 @@ if (strlen($short) > 0) {
     </div>
 
     <footer class="w-full text-center py-4 text-gray-800 text-sm mt-auto">
-      <a href="https://skambink.tel/112">Skambink.TEL</a>
+      <a href="javascript:void(0);" onclick="copyToClipboard('<?= $phone ?>');return false;" class="text-gray-700 ml-2 text-xl"><i class="fa-solid fa-copy"></i></a>
     </footer>
 
     <!-- Modal fonas -->
