@@ -1,8 +1,8 @@
 <?php
 
-$phoneGet = isset($_GET['phone']) ? htmlspecialchars(basename($_GET['phone'])) : '112';
+$phoneGet = isset($_GET['phone']) ? htmlspecialchars(basename($_GET['phone'])) : '';
 $phone = $phoneGet;
-$name = isset($_GET['name']) ? htmlspecialchars(basename($_GET['name'])) : 'Nežinomas numeris';
+$name = isset($_GET['name']) ? htmlspecialchars(basename($_GET['name'])) : '';
 $short = isset($_GET['short']) ? htmlspecialchars(basename($_GET['short'])) : '';
 
 $dataExists = false;
@@ -30,7 +30,6 @@ $data = array(
   )
 );
 
-$description = "Telefono numeris nėra registruotas sistemoje, todėl papildoma informacija gali būti netiksli. Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį";
 $image = "https://skambink.tel/img/default.png";
 
 if( isset($data[$phone]) ) {
@@ -54,6 +53,15 @@ if( isset($data[$phone]) ) {
     $smsDisable = $data[$phone]["smsDisable"];
   }
 
+}
+
+if (!$dataExists) {
+  if ( $name === '' ) {
+    $name = "Nežinomas numeris";
+    $description = "Telefono numeris nėra registruotas sistemoje. Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį užregistruoti.";
+  } else {
+    $description = "Telefono numeris nėra registruotas sistemoje, todėl nurodyta informacija gali būti netiksli. Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį užregistruoti.";
+  }
 }
 
 $phone = str_starts_with($phone, '0') ? "+370" . substr($phone, 1) : $phone;
@@ -165,7 +173,7 @@ if (strlen($short) > 0) {
         <p class="text-gray-600" style="margin-top:0;" id="modalMessage"><?= $description ?></p>
 
         <?php if( !$dataExists ): ?>
-        <button onclick="location.href='sms:+37061600055?body=Prašau užregistruoti mano telefono numerį sistemoje Skambink.TEL'" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">Užregistruoti</button>
+        <button onclick="location.href='sms:+37061600055?body=Prašau užregistruoti mano telefono numerį sistemoje Skambink.TEL'" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">Registruoti</button>
         <?php endif; ?>
 
       </div>
