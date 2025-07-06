@@ -139,7 +139,7 @@ if (strlen($short) > 0) {
               <?php endif; ?>
             </a>
 
-            <?php if( $dataExists ): ?>
+            <?php if( $dataExists && 1==2): ?>
               <a href="javascript:void(0)" onclick="share()" class="ml-1 text-xl">
                 <i class="fa-solid fa-share-nodes opacity-70 hover:opacity-100"></i>
               </a>
