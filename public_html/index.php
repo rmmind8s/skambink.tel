@@ -128,14 +128,14 @@ if (strlen($short) > 0) {
           />
         </div>
         <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-2">
-          <h2 class="text-2xl font-semibold"><?= htmlspecialchars($name) ?></h2>
+          <h2 class="text-2xl font-semibold inline-block"><?= htmlspecialchars($name) ?></h2>
 
 
             <a href="javascript:void(0)" onclick="showModal()" class="ml-1 text-xl">
               <?php if( $dataExists ): ?>
-                <i class="fa-solid fa-circle-info opacity-50"></i>
+                <i class="fa-solid fa-circle-info opacity-70"></i>
               <?php else: ?>
-                <i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>
+                <i class="fa-solid fa-triangle-exclamation text-yellow-500 opacity-70"></i>
               <?php endif; ?>
             </a>
 
