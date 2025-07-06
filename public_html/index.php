@@ -164,21 +164,15 @@ if (strlen($short) > 0) {
       >
         <a href="tel:<?= $phone ?>"><i class="fa-solid fa-square-phone-flip"></i></a>
       </button>
-      <?php if( !$smsDisable ): ?>
-        <button
-          class="text-blue-500 flex items-center justify-center text-4xl mt-10"
-        >
-          <a href="sms:<?= $phone ?>"><i class="fa-solid fa-comment-sms"></i></a>
-        </button>
-      <?php endif; ?>
 
-      <?php if( $messenger !== null ): ?>
-        <button
-          class="text-blue-500 flex items-center justify-center text-4xl mt-10"
-        >
-          <a href="<?= $messenger ?>"><i class="fa-brands fa-facebook-messenger"></i></a>
-        </button>
-      <?php endif; ?>
+      <div class="flex space-x-4 mt-10">
+        <?php if(!$smsDisable): ?>
+          <a href="sms:<?= $phone ?>" class="text-blue-500 text-4xl"><i class="fa-solid fa-comment-sms"></i></a>
+        <?php endif; ?>
+        <?php if($messenger !== null): ?>
+          <a href="<?= $messenger ?>" class="text-4xl" style="color:#0b65fe"><i class="fa-brands fa-facebook-messenger"></i></a>
+        <?php endif; ?>
+      </div>
 
     </div>
 
