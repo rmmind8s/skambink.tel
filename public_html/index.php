@@ -58,9 +58,9 @@ if( isset($data[$phone]) ) {
 if (!$dataExists) {
   if ( $name === '' ) {
     $name = "Nežinomas numeris";
-    $description = "Telefono numeris nėra registruotas sistemoje.</p><p>Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį užregistruoti.";
+    $description = "Telefono numeris nėra registruotas sistemoje.</p><p>Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį užregistruoti trumpąja žinute.";
   } else {
-    $description = "Telefono numeris nėra registruotas sistemoje, todėl nurodyta informacija gali būti netiksli.</p><p>Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį užregistruoti.";
+    $description = "Telefono numeris nėra registruotas sistemoje, todėl nurodyta informacija gali būti netiksli.</p><p>Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį užregistruoti trumpąja žinute.";
   }
 }
 
@@ -188,9 +188,9 @@ if (strlen($short) > 0) {
         <p class="text-gray-600" style="margin-top:0;" id="modalMessage"><?= $description ?></p>
 
         <?php if( !$dataExists ): ?>
-        <button onclick="location.href='sms:+37061600055?body=Prašau užregistruoti mano telefono numerį sistemoje Skambink.TEL'" class="px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">Registruoti</button>
+        <button onclick="location.href='sms:+37061600055?body=Prašau užregistruoti mano telefono numerį sistemoje Skambink.TEL'" class="px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">Rašyti <i class="fa-solid fa-comment-sms"></i></button>
         <?php else: ?>
-        <button onclick="location.href='tel:<?= $phone ?>'" class="px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">Skambinti</button>
+        <button onclick="location.href='tel:<?= $phone ?>'" class="px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">Skambinti <i class="fa-solid fa-phone-flip"></i></button>
         <?php endif; ?>
 
       </div>
