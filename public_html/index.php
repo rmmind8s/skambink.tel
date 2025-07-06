@@ -128,13 +128,28 @@ if (strlen($short) > 0) {
           />
         </div>
         <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center p-2">
-          <h2 class="text-2xl font-semibold"><?= htmlspecialchars($name) ?>
-            <a href="#" onclick="showModal()" class="ml-1 text-xl"><?= $dataExists ? '<i class="fa-solid fa-circle-info opacity-50"></i></i>' : '<i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>' ?></a></h2>
+          <h2 class="text-2xl font-semibold"><?= htmlspecialchars($name) ?></h2>
+
+
+            <a href="javascript:void(0)" onclick="showModal()" class="ml-1 text-xl">
+              <?php if( $dataExists ): ?>
+                <i class="fa-solid fa-circle-info opacity-50"></i>
+              <?php else: ?>
+                <i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>
+              <?php endif; ?>
+            </a>
+
+            <?php if( $dataExists ): ?>
+              <a href="javascript:void(0)" onclick="share()" class="ml-1 text-xl">
+                <i class="fa-solid fa-share-nodes"></i>
+              </a>
+            <?php endif; ?>
+
           <p class="mt-1"><?= htmlspecialchars($short) ?></p>
         </div>
       </div>
       <h1 class="text-3xl font-semibold text-gray-900 flex items-center"><?= $phone ?>
-        <a href="#" onclick="copyToClipboard('<?= $phone ?>');return false;" class="text-gray-700 ml-2 text-xl"><i class="fa-solid fa-copy"></i></a>
+        <a href="javascript:void(0);" onclick="copyToClipboard('<?= $phone ?>');return false;" class="text-gray-700 ml-2 text-xl"><i class="fa-solid fa-copy"></i></a>
       </h1>
       <!-- Skambinimo mygtukas -->
       <button
