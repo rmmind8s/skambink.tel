@@ -24,7 +24,7 @@ $data = array(
     "description" => "Lietuvos Caritas koordinuoja Caritas veiklą Lietuvoje, atstovauja organizacijai nacionaliniu lygiu ir užsienyje, gina pažeidžiamųjų interesus.",
     "image" => "caritas.png"
   ),
-  "065694229" = array(
+  "065694229" => array(
     "name" => "Gupė GERS",
     "short" => "Vedėjas, atlikėjai, DJ",
     "description" => "Labai gera grupė",
