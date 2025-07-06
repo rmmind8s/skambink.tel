@@ -11,7 +11,7 @@ $smsDisable = false;
 $data = array(
   "061600055" => array(
     "name" => "IT'menas",
-    "short" => "#Kūrimas #Vystymas #Patikra",
+    "short" => "Informacinių sistemų specialistas",
     "description" => "Visokeriopa IT pagalba ➕ kūrybiniai sprendimai ☁",
     "image" => "061600055.jpg"
   ),
@@ -31,7 +31,7 @@ $data = array(
 );
 
 $description = "Telefono numeris nėra registruotas sistemoje, todėl papildoma informacija gali būti netiksli. Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį";
-$image = "https://skambink.tel/img/default.png";
+$image = "https://skambink.tel/img/default.jpeg";
 
 if( isset($data[$phone]) ) {
 
@@ -158,7 +158,7 @@ if (strlen($short) > 0) {
       <div onclick="event.stopPropagation()" class="relative bg-white rounded-2xl shadow-xl max-w-md w-full p-6 text-center space-y-4">
 
         <!-- Uždarymo mygtukas -->
-        <button onclick="closeModal()" class="absolute top-1 right-2 text-gray-400 hover:text-gray-600 text-2xl leading-none focus:outline-none">
+        <button onclick="closeModal()" class="absolute top-1 right-3 text-gray-400 hover:text-gray-600 text-2xl leading-none focus:outline-none">
           &times;
         </button>
 
