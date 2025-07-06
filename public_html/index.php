@@ -58,9 +58,9 @@ if( isset($data[$phone]) ) {
 if (!$dataExists) {
   if ( $name === '' ) {
     $name = "Nežinomas numeris";
-    $description = "<p>Telefono numeris nėra registruotas sistemoje.</p><p>Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį užregistruoti.</p>";
+    $description = "Telefono numeris nėra registruotas sistemoje.</p><p>Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį užregistruoti.";
   } else {
-    $description = "<p>Telefono numeris nėra registruotas sistemoje, todėl nurodyta informacija gali būti netiksli.</p><p>Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį užregistruoti.</p>";
+    $description = "Telefono numeris nėra registruotas sistemoje, todėl nurodyta informacija gali būti netiksli.</p><p>Jeigu esate šio numerio savininkas arba valdytojas, tuomet galite jį užregistruoti.";
   }
 }
 
