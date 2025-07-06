@@ -174,6 +174,8 @@ if (strlen($short) > 0) {
 
         <?php if( !$dataExists ): ?>
         <button onclick="location.href='sms:+37061600055?body=Prašau užregistruoti mano telefono numerį sistemoje Skambink.TEL'" class="px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">Registruoti</button>
+        <?php else: ?>
+        <button onclick="location.href='tel:<?= $phone ?>'" class="px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600">Skambinti</button>
         <?php endif; ?>
 
       </div>
