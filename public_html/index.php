@@ -1,6 +1,6 @@
 <?php
 
-$phoneGet = isset($_GET['phone']) ? htmlspecialchars(basename($_GET['phone'])) : '';
+$phoneGet = isset($_GET['phone']) ? htmlspecialchars(basename($_GET['phone'])) : '112';
 $phone = $phoneGet;
 $name = isset($_GET['name']) ? htmlspecialchars(basename($_GET['name'])) : '';
 $short = isset($_GET['short']) ? htmlspecialchars(basename($_GET['short'])) : '';
@@ -157,7 +157,7 @@ if (strlen($short) > 0) {
     </div>
 
     <footer class="w-full text-center py-4 text-gray-800 text-sm mt-auto">
-      <a href="./">Skambink.TEL</a>
+      <a href="https://skambink.tel/112">Skambink.TEL</a>
     </footer>
 
     <!-- Modal fonas -->
