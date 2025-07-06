@@ -171,6 +171,8 @@ if (strlen($short) > 0) {
 
     <footer class="w-full text-center py-4 text-gray-800 text-sm mt-auto">
       <a href="javascript:void(0);" onclick="copyToClipboard('<?= $phone ?>');return false;" class="text-gray-700 ml-2 text-xl"><i class="fa-solid fa-copy"></i></a>
+      <a href="javascript:void(0);" onclick="copyToClipboard('<?= $phone ?>');return false;" class="text-gray-700 ml-2 text-xl"><i class="fa-solid fa-share-nodes"></i></a>
+      <a href="javascript:void(0);" onclick="copyToClipboard('<?= $phone ?>');return false;" class="text-gray-700 ml-2 text-xl"><i class="fa-solid fa-plus"></i></a>
     </footer>
 
     <!-- Modal fonas -->
