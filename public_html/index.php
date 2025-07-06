@@ -40,6 +40,8 @@ $data = array(
 );
 
 $image = "https://skambink.tel/img/default.png";
+$OGimage = "https://skambink.tel/img/skambink-og.png";
+$OGDescription = "Dalintis telefonu paprasta";
 
 if( isset($data[$phone]) ) {
 
@@ -50,6 +52,7 @@ if( isset($data[$phone]) ) {
 
   if( isset($data[$phone]["image"]) ){
     $image = "https://skambink.tel/img/" . $data[$phone]["image"];
+    $OGimage = $image;
   }
 
   if( isset($data[$phone]["messenger"]) ){
@@ -58,6 +61,7 @@ if( isset($data[$phone]) ) {
 
   if( isset($data[$phone]["description"]) ){
     $description = $data[$phone]["description"];
+    $OGDescription = $description;
   } else {
     $description = "Jeigu esate šio telefono numerio savininkas/valdytojas, tuomet galite <a>nurodyti papildomą informaciją</a>.";
   }
@@ -111,8 +115,8 @@ if (strlen($short) > 0) {
         <meta property="og:url" content="https://skambink.tel/<?= $phoneGet ?>">
         <meta property="og:type" content="website">
         <meta property="og:title" content="<?= $title ?>"/>
-        <meta property="og:description" content="<?= $description ?>"/>
-        <meta property="og:image" content="<?= $image ?>"/>
+        <meta property="og:description" content="<?= $OGDescription ?>"/>
+        <meta property="og:image" content="<?= $OGimage ?>"/>
 
         <script src="https://kit.fontawesome.com/d51de49024.js" crossorigin="anonymous"></script>
         <script src="https://cdn.tailwindcss.com"></script>
